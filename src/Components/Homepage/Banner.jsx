@@ -7,7 +7,7 @@ const AboutUsPage = () => {
   useEffect(() => {
     const carousel = document.querySelector('#carouselExampleCaptions');
     const carouselInstance = new Carousel(carousel, {
-      interval: 5000, // Adjust the interval between slides as needed
+      interval: 5000, 
     });
   }, []);
 
