@@ -1,0 +1,248 @@
+.footer {
+    position: relative !important;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f7f7f7;
+    color: #414141;
+    font-family: Poppins;
+    padding: 20px 50px;
+    box-sizing: border-box;   
+}
+
+.footer.section {
+    background-color: #2a4d97;
+    color: white;
+    min-height: 49vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.back-to-top {
+    background-color: #0d2e75;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+  /* Existing styles for other elements */
+.vector-icon1 {
+    position: absolute;
+    height: 81.25%;
+    width: 78.79%;
+    top: 9.38%;
+    right: 9.09%;
+    bottom: 9.38%;
+    left: 12.12%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.phinstagram-logo {
+    text-decoration: none;
+    position: relative;
+    width: 33px;
+    height: 32px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.vector-icon2,
+.vector-icon3 {
+    position: absolute;
+    height: 83.44%;
+    width: 43.64%;
+    top: 8.44%;
+    right: 27.27%;
+    bottom: 8.13%;
+    left: 29.09%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.vector-icon3 {
+    height: 61.25%;
+    width: 87.58%;
+    top: 19.38%;
+    right: 6.06%;
+    bottom: 19.37%;
+    left: 6.36%;
+}
+
+.phinstagram-logo-parent {
+    position: absolute;
+    top: 333px;
+    left: 120px;
+    width: 129px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.footer-child {
+    position: absolute;
+    top: 440.5px;
+    left: 119.5px;
+    border-top: 1px solid #414141;
+    box-sizing: border-box;
+    width: 1201px;
+    height: 1px;
+}
+
+.popular-categories {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 20px;
+}
+
+.fruits-vegetables {
+    margin: 0;
+}
+
+.fruits-vegetables-container {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    font-size: 16px;
+    line-height: 37px;
+}
+
+.popular-category-child {
+    position: absolute;
+    top: 34.5px;
+    left: -1.5px;
+    border-top: 3px solid #666;
+    box-sizing: border-box;
+    width: 178px;
+    height: 3px;
+}
+
+.popular-category,
+.services-child {
+    position: absolute;
+    top: 80px;
+    left: 554px;
+    width: 193px;
+    height: 278px;
+}
+
+.services-child {
+    top: 34.5px;
+    left: -1.5px;
+    border-top: 3px solid #666;
+    box-sizing: border-box;
+    width: 170px;
+    height: 3px;
+}
+
+.services {
+    position: absolute;
+    top: 80px;
+    left: 849px;
+    width: 225px;
+    height: 278px;
+}
+
+.contact-us1 {
+    position: relative;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.div3,
+.whats-app {
+    position: absolute;
+    top: 22px;
+    left: 35px;
+    line-height: 20px;
+}
+
+.whats-app {
+    top: 0;
+}
+
+.ant-designwhats-app-outlined-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.parent {
+    position: relative;
+    width: 186px;
+    height: 42px;
+}
+
+.call-us,
+.div4 {
+    position: absolute;
+    top: 23px;
+    left: 35px;
+    line-height: 20px;
+}
+
+.call-us {
+    top: 1px;
+}
+
+.group {
+    position: relative;
+    width: 186px;
+    height: 43px;
+}
+
+.contact-us {
+    position: absolute;
+    top: 160px;
+    left: 120px;
+    width: 186px;
+    height: 145px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    font-size: 16px;
+}
+
+.all-rights-reserved {
+    position: absolute;
+    top: 471px;
+    left: 513px;
+    line-height: 20px;
+    opacity: 0.5;
+}
