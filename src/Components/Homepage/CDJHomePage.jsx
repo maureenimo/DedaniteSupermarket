@@ -4,7 +4,6 @@ import "react-multi-carousel/lib/styles.css";
 import { Link } from 'react-router-dom';
 import { Details } from "./Details";
 
-
 const DrinksPage = ({handleAddToCart}) => {
 
   const [drinks, setDrinks] = useState([])
@@ -37,6 +36,7 @@ const DrinksPage = ({handleAddToCart}) => {
       setDrinks(filteredData)
     })
   }, [])
+
   const details = drinks.map((item) => (
     <Details
       key={item.id}
