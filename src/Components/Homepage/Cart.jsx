@@ -44,4 +44,70 @@ function Cart({customer, cart, setCart, removeFromCart, totalAmount}) {
                     <td>{item.product.price}</td>
                     <td className='quantity'>
 
+                      <button className="add" onClick={() => {
+                        setCart((prevdata) => {
+                          const updatedQuantity = prevdata.map(
+                            (prevItem) => prevItem.product.id == item.product.id ? {
+                              ...prevItem, quantity: item.quantity + 1
+                            } : prevItem
+                          )
+                          return updatedQuantity
+                        })
+                      }}>
+                        +
+                      </button>
 
+                      
+                      {item.quantity}
+
+                      <button onClick={() => {
+                        setCart((prevdata) => {
+                          const updatedQuantity = prevdata.map(
+                            (prevItem) => prevItem.product.id == item.product.id ? {
+                              ...prevItem, quantity:Math.max(item.quantity - 1, 0)
+                            } : prevItem
+                          )
+                          return updatedQuantity
+                        })
+                      }}>
+                        -
+                      </button>
+                    </td>
+                    <td>
+                      <button className="remove-item" onClick={() => removeFromCart(item.product)}>
+                        Remove Item
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+              <tbody>
+                <tr className='tr-amount'>
+                  <td className='amount'></td>
+                  <td className='amount'></td>
+                  <td className='amount'></td>
+                  <td className='amount'></td>
+                  <td className='amount'></td>
+                  <td>
+                    Total: {totalAmount().toFixed(2)}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+   
+        </div>
+      )}
+  
+      <div className='order-summary'>
+        <button className="check-out" onClick={customer ? (handlePay) : (handleCheckUser)}>
+          Check Out
+        </button>
+        <button className="clear-cart" onClick={clearCart}>
+          Clear Cart
+        </button>
+      </div>
+    </div>
+  )
+}
+
+export default Cart;
