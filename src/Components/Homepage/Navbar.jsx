@@ -53,3 +53,56 @@ export const Navbar = ({cart, customer, setCustomer, handleAddToCart, resetSearc
           onClick={() => setResetSearchKey((prevKey) => prevKey + 1)}> 
           Top Categories
         </Link>
+        <Link to="/fruits-and-vegetables" 
+          onClick={() => setResetSearchKey((prevKey) => prevKey + 1)}> 
+          Fruits & Vegetables 
+        </Link>
+        <Link to="/cold-drinks-and-juices" 
+          onClick={() => setResetSearchKey((prevKey) => prevKey + 1)}>
+          Cold Drinks & Juices 
+        </Link>
+        <Link to="/snacks-and-munchies" 
+          onClick={() => setResetSearchKey((prevKey) => prevKey + 1)}> 
+          Snacks & Munchies 
+        </Link>
+        <Link to="/featured-brands" 
+          onClick={() => setResetSearchKey((prevKey) => prevKey + 1)}>
+          Featured Brands 
+        </Link>
+      </div>
+
+      <div className="navbar_loginRegister" onClick={() => setResetSearchKey((prevKey) => prevKey + 1)}>
+
+        {customer ? (
+          <div className="navbar_user">
+            <h1>Welcome {customer.name}</h1>
+            <button onClick={handleLogout}>Logout</button>
+
+            <select className="select" onChange={handleOrder}>
+              <option value="">My Account</option>
+              <option value="myorders">Orders</option>
+            </select>
+          </div>
+        ) : (
+          <div className="navbar_loginRegister">
+            {notification?(<div className="LogOutNotification">{notification}</div>):("")}
+            <Link to="/login"> Login</Link>
+            <Link to="/register"> | Register</Link>
+          </div>
+        )}
+        
+      </div>
+
+      <div>
+        <Link to="/cart" className="navbar_cart" onClick={() => setResetSearchKey((prevKey) => prevKey + 1)}>
+          <ShoppingCart size={32} />
+          Cart ({cart.length})
+        </Link>
+      </div>
+      <SearchBar className="navbar_searchbar" key={resetSearchKey} handleAddToCart={handleAddToCart}/>
+      {location.pathname === '/search-result' && (
+        <SearchResultPage handleAddToCart={handleAddToCart} />
+      )}
+    </div>
+  );
+};
