@@ -69,3 +69,29 @@ const AllCategoriesPage = ({handleAddToCart}) => {
            </div>
          </div>
        </div>
+
+
+       
+     </div>
+   </div>
+   {/* Product Cards */}
+   <div className="card-container">
+         {filteredProducts.map((product) => (
+          <Details 
+            key={product.id}
+            id={product.id}
+            name={product.name}
+            price={product.price}
+            imageurl={product.imageurl}
+            handleAddToCart={handleAddToCart}
+          />
+         ))}
+       </div>
+       
+   </>
+ );
+};
+
+
+export default AllCategoriesPage;
+
