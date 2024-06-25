@@ -22,3 +22,50 @@ const AllCategoriesPage = ({handleAddToCart}) => {
    .filter(product => selectedPriceRange === 'All' || (selectedPriceRange === 'Low' && product.price < 1) || (selectedPriceRange === 'High' && product.price >= 1));
 
   
+   const details = filteredProducts.map((product) => (
+    <Details
+      key={product.id}
+      id={product.id}
+      name={product.name}
+      imageurl={product.imageurl}
+      price={product.price}
+      details={product.details}
+      weight={product.weight}
+      handleAddToCart={handleAddToCart}
+    />
+  ));
+
+
+ return (
+  <>
+   <div className="container">
+     <h1>All Products</h1>
+
+
+     <div className="content">
+       {/* Filter Card */}
+       <div className="card filter-card">
+         <div className="filter-section">
+           <h2>Filters</h2>
+           <div>
+             <label>Category:</label>
+             <select value={selectedCategory} onChange={e => setSelectedCategory(e.target.value)}>
+               <option value="All">All</option>
+               <option value="Fruits">Fruits</option>
+               <option value="Vegetables">Vegetables</option>
+               <option value="Snacks">Snacks</option>
+               <option value="Munchies">Munchies</option>
+               <option value="Cold Drinks">Cold Drinks</option>
+               <option value="Juices">Juices</option>
+             </select>
+           </div>
+           <div>
+             <label>Price Range:</label>
+             <select value={selectedPriceRange} onChange={e => setSelectedPriceRange(e.target.value)}>
+               <option value="All">All</option>
+               <option value="Low">Low</option>
+               <option value="High">High</option>
+             </select>
+           </div>
+         </div>
+       </div>
