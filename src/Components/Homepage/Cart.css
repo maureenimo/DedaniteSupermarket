@@ -1,0 +1,100 @@
+.selected-cart {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.table-container {
+    margin-top: 70px;
+    min-height: 60vh;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #f2f2f2;
+}
+
+.table-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity button {
+    background-color: #2a4d97;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.quantity button:hover {
+    background-color: #45a049;
+}
+
+.tr-amount td {
+    border-top: 2px solid #ddd;
+}
+
+.amount {
+    padding: 8px;
+}
+
+.order-summary {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.remove-item{
+    background-color: #2a4d97; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.clear-cart{
+    margin-left: 10px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: red;
+}
+
+.check-out{
+    margin-right: 10px;
+    background-color: #2a4d97; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.remove-item:hover,
+.check-out:hover {
+    background-color: #0056b3; 
+}
+
+.clear-cart:hover{
+    background-color: #F93822FF;
+}

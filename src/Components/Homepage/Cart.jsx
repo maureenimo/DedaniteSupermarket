@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import "./Cart.css";
-function Cart({customer, cart, setCart, removeFromCart, totalAmount}) {
 
+function Cart({customer, cart, setCart, removeFromCart, totalAmount}) {
 
   const navigate = useNavigate()
 
