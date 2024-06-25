@@ -37,3 +37,40 @@ const DrinksPage = ({handleAddToCart}) => {
       setDrinks(filteredData)
     })
   }, [])
+  const details = drinks.map((item) => (
+    <Details
+      key={item.id}
+      id = {item.id}
+      name={item.name}
+      imageurl={item.imageurl} 
+      price={item.price}
+      details={item.details}
+      weight={item.weight} 
+      handleAddToCart={handleAddToCart}
+    />
+  ));
+
+  return (
+    <div className="Container">
+      <div className="shop-from-top-categories">
+        <div className="top-categories-frame">
+          <div className="title">
+            <div className="shop-from-top-categories-parent">
+              <div className="heading-wrapper">
+                <h1 className="shop-from-top-container">
+                  <span>{`Cold Drinks and  `}</span>
+                  <span className="top-categories">Juices</span>
+                </h1>
+              </div>
+              <div className="line-div" />
+            </div>
+            <div className="title-child" />
+          </div>
+        </div>
+        <Carousel responsive={responsive}>{details}</Carousel>
+      </div>
+    </div>
+  );
+};
+
+export default DrinksPage;
