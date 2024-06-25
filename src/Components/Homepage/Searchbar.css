@@ -1,0 +1,76 @@
+.search-search {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 720px;
+    margin-top: 0px;
+    position: absolute;
+    width: 700px;
+    height: 0px;
+    z-index: 999;
+    align-items: center;
+    margin-right: 100px;
+    border-radius: 4px; 
+    z-index: 1001; /* Ensure the search results are above the navbar */
+}
+    
+.search-searchInputs {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: visible;
+    z-index: 999;
+}
+
+search-input {
+    flex: 1;
+    padding: 5px;
+}
+
+.search-searchIcon {
+    background-color: #f9fdfa;
+    padding: 5px;
+    cursor: pointer;
+    height: 10px;
+    
+    margin-bottom: 20px;
+    position: absolute; /* or relative, depending on your layout needs */
+    right: 0; /* Adjust based on your layout */
+    top: 0;
+    z-index: 1; /* Keep only one position: absolute; */
+}
+
+.search-searchIcon:hover {
+    background-color: #d8d8df;
+    height: 20px;
+}
+
+.search-searchResultPage {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    min-height: 800px;
+    /* height: 500px; */
+    min-width: 1850px;
+    margin: -105px;
+    margin-left: -500px;
+    margin-right: -185px;
+    margin-bottom: 400px;
+    margin-top: 65px;
+    gap: 10px;
+    justify-content: space-evenly;
+    padding: 0px;
+    background: white;
+    overflow-y: scroll;
+    
+}
+
+/* Style for the close icon */
+#search-clearBtn {
+    cursor: pointer;
+    color: white;
+}
+
+.search-navbar {
+    z-index: 0px;
+}
