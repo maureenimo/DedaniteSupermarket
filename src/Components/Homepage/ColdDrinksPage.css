@@ -1,0 +1,225 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 5px; /* Adjust the margin as per your preference */
+    width: 150px;
+}
+
+.product--image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.price {
+    font-weight: bold;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between; /* Distribute cards evenly on one row */
+    flex-wrap: nowrap; /* Ensure all cards stay in one row */
+}
+
+.card {
+    flex: 0 0 calc(14.28% - 10px); /* Adjust the width of each card */
+    background-color: #f8f9fa; /* Light background color, change as needed */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    max-width: 200px; /* Decreased the max-width for smaller cards */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px 12px 0 0;
+}
+
+.card label {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.category-section {
+    margin-bottom: 40px;
+}
+
+.card-details {
+    padding: 20px;
+}
+
+.card-off {
+    background-color: #1c74af;
+    color: #fff;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.card-details h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.card-details p {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.card-details button {
+    background-color: #c5771e; /* Green color for buttons, change as needed */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.card-details button:hover {
+    background-color: #c5771e;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    flex: 0 0 100%; /* Full width for the sidebar */
+    margin-bottom: 20px; /* Add some space between heading and sidebar */
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+label {
+    text-align: center;
+    display: block;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: 200px !important;
+    flex: 0 0 200px; /* Adjust the width of each card */
+    margin: 20px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px 12px 0 0;
+}
+
+.filter-card {
+    flex: 0 0 calc(30% - 10px); /* Adjust the width of the filter card */
+    margin-bottom: 20px;
+    background-color: #ffffff; /* White background for the filter card */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+.filter-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card label {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.card-details {
+    padding: 20px;
+}
+
+.card-details p {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.card-details button {
+    background-color: #3666c8;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.card-details button:hover {
+    background-color: #3666c8;
+}
