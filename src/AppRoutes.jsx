@@ -2,7 +2,7 @@ import './App.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import Register from './Components/Register';
 import Login from './Components/Login';
-import HomePage from './Components/Homepage';
+import HomePage from './Components/Homepage/Homepage';
 import { TopCategoriesPage } from './Components/Homepage/TopCategoriesPart';
 import DrinksPage from './Components/Homepage/CDJHomePage';
 import FruitsVegPage from './Components/Homepage/FVHomePage';
