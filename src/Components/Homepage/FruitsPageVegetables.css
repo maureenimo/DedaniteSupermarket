@@ -1,0 +1,26 @@
+import React, { useEffect, useState } from 'react';
+import "./FruitsPageVegetables.css"
+import Details from './Details';
+
+
+const FruitsVegetablesPage = ({handleAddToCart}) => {
+  const [fruitsveg, setfruitsveg] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('All');
+
+ useEffect(() => {
+  fetch('https://dedanite-online.onrender.com/products')
+  .then((response) => response.json())
+  .then((data) => {
+    const products = data.filter((item) => item.category == 'FruitsVeg')
+    setfruitsveg(products)
+    setLoading(true)
+  })
+ }, [])
+
+
+ const filteredProducts = fruitsveg
+   .filter(product => selectedCategory === 'All' || product.category === selectedCategory)
+   .filter(product => selectedPriceRange === 'All' || (selectedPriceRange === 'Low' && product.price < 1) || (selectedPriceRange === 'High' && product.price >= 1));
+
