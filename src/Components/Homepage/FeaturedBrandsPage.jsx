@@ -3,9 +3,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Input } from "./Input";
 import './FVC.css';
-
-
-
+// static images
 import nestleImage from "../Assets/nestleproductphoto.jpg";
 import pAndGImage from "../Assets/png.jpg";
 import unileverImage from "../Assets/unilever.jpg";
@@ -37,34 +35,24 @@ const FeaturedBrandsPage = () => {
     {
         id:1,
         imageurl: nestleImage,
-        name:"Nestle",
-        
-
-        
-
+        name:"Nestle",    
     },
     {
         id:2,
         imageurl: pAndGImage,
         name:"Proctor and Gamble",
         
-        
-
     },
     {
         id:3,
         imageurl: unileverImage,
         name:"Unilever",
         
-        
-
     },
     {
         id:4,
         imageurl: jAndJImage,
         name:"Johnson & Johnson",
-        
-        
 
     },
     {
@@ -72,8 +60,6 @@ const FeaturedBrandsPage = () => {
         imageurl: samsungImage,
         name:"Samsung",
         
-        
-
     },
     
     {
@@ -81,8 +67,6 @@ const FeaturedBrandsPage = () => {
         imageurl: panasonicImage,
         name:"Panasonic",
         
-        
-
     },
 ]
 
@@ -94,3 +78,32 @@ const input = BrandsData.map((item) => (
       
     />
   ));
+
+  return (
+    <div className="HomePage">
+      <div className="shop-from-top-categories">
+        <div className="top-categories-frame">
+          <div className="title">
+            <div className="shop-from-top-categories-parent">
+              <div className="heading-wrapper">
+                <h1 className="shop-from-top-container">
+                  <span>{`Featured `}</span>
+                  <span className="top-categories">Brands</span>
+                </h1>
+              </div>
+              <div className="line-div" />
+            </div>
+            <div className="title-child" />
+          </div>
+        </div>
+        <Carousel responsive={responsive}>{input}</Carousel>
+      </div>
+    </div>
+  );
+  };
+
+
+export default FeaturedBrandsPage;
+
+
+
