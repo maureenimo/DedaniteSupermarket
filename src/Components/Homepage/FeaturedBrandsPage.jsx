@@ -32,3 +32,65 @@ const FeaturedBrandsPage = () => {
       items: 1,
     },
   };
+
+  const BrandsData =[
+    {
+        id:1,
+        imageurl: nestleImage,
+        name:"Nestle",
+        
+
+        
+
+    },
+    {
+        id:2,
+        imageurl: pAndGImage,
+        name:"Proctor and Gamble",
+        
+        
+
+    },
+    {
+        id:3,
+        imageurl: unileverImage,
+        name:"Unilever",
+        
+        
+
+    },
+    {
+        id:4,
+        imageurl: jAndJImage,
+        name:"Johnson & Johnson",
+        
+        
+
+    },
+    {
+        id:5,
+        imageurl: samsungImage,
+        name:"Samsung",
+        
+        
+
+    },
+    
+    {
+        id:7,
+        imageurl: panasonicImage,
+        name:"Panasonic",
+        
+        
+
+    },
+]
+
+const input = BrandsData.map((item) => (
+    <Input
+      key={item.id}
+      name={item.name}
+      url={item.imageurl}
+      
+    />
+  ));
