@@ -63,3 +63,32 @@ const Mpesa = ({ totalAmount }) => {
     event.preventDefault();
     setLoading(true);
 
+    fetch('https://dedanite-online.onrender.com/make_payment', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ phone, amount }),
+    })
+      .then((response) => {
+        setLoading(false);
+
+        if (response.ok) {
+          setNotification('Payment made');
+          
+          setTimeout(() => {
+            navigate('/myorders')
+          }, 1000);
+        } else {
+          throw new Error ('Payment failed');
+        }
+      })
+      .catch((error) => {
+        setLoading(false);
+        setError(error.message)
+        
+        setTimeout(() => {
+          setError(null)
+        }, 1000);
+      });
+  };
