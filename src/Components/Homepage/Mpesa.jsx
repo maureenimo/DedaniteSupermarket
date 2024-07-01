@@ -23,9 +23,32 @@ const Mpesa = ({ totalAmount }) => {
   const handleStreet = (event) => setStreet(event.target.value);
   const handleAdditionalSpecifications = (event) => setAdditionalSpecifications(event.target.value);
 
+  const createOrder = (statusValue) => {
+    fetch('https://dedanite-online.onrender.com/orders', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, amount, county, street, status: statusValue }),
+    })
+      .then((response) => {
+        if (response.ok) {
+          setNotification('Order placed');
+        }
+      });
+  };
+  
+  const paylater = () => {
+    createOrder(false);
+    setTimeout(() => {
+      navigate('/myorders');
+    }, 2000);
+  };
+  
   const submitForm = (event) => {
     event.preventDefault();
     setLoading(true);
+    createOrder(true);
   
     fetch('https://dedanite-online.onrender.com/make_payment', {
       method: 'POST',
@@ -108,7 +131,8 @@ const Mpesa = ({ totalAmount }) => {
           />
           <button type='submit'>{loading ? 'Processing...' : 'Pay Now'}</button>
         </form>
+        <button className='paylater' onClick={paylater}>PayLater</button>
       </div>
     </div>
   );
-  
+}
