@@ -23,11 +23,42 @@ const Mpesa = ({ totalAmount }) => {
   const handleStreet = (event) => setStreet(event.target.value);
   const handleAdditionalSpecifications = (event) => setAdditionalSpecifications(event.target.value);
 
+  const submitForm = (event) => {
+    event.preventDefault();
+    setLoading(true);
+  
+    fetch('https://dedanite-online.onrender.com/make_payment', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ phone, amount }),
+    })
+      .then((response) => {
+        setLoading(false);
+        if (response.ok) {
+          setNotification('Payment made');
+          setTimeout(() => {
+            navigate('/myorders');
+          }, 1000);
+        } else {
+          throw new Error('Payment failed');
+        }
+      })
+      .catch((error) => {
+        setLoading(false);
+        setError(error.message);
+        setTimeout(() => {
+          setError(null);
+        }, 1000);
+      });
+  };
+  
   return (
     <div className='mpesaPage'>
       <div className='mpesacard'>
         <h1 className="shipping-header">SHIPPING DETAILS</h1>
-        <form className="shippingForm">
+        <form className="shippingForm" onSubmit={submitForm}>
           <label>
             Name:
             <input
@@ -58,10 +89,26 @@ const Mpesa = ({ totalAmount }) => {
               onChange={handleStreet}
             />
           </label>
+  
+          <h1 className='header'>PAYMENT INFORMATION</h1>
+  
+          <input
+            type='number'
+            placeholder='Enter number'
+            name='phone'
+            value={phone}
+            onChange={handleNumber}
+          />
+          <input
+            type='number'
+            placeholder='Enter amount'
+            name='amount'
+            value={amount.toFixed(2)}
+            onChange={handleAmount}
+          />
+          <button type='submit'>{loading ? 'Processing...' : 'Pay Now'}</button>
         </form>
       </div>
     </div>
   );
-};
-
-export default Mpesa;
+  
