@@ -1,0 +1,19 @@
+.history_container{
+    background-color: #FCF6F5FF;
+    text-align: center;
+    margin-top: 150px;
+    /* min-height: 60vh */
+}
+
+.history_container h2{
+    color: chocolate;
+    font-size: 200%;
+}
+
+
+.table{
+    border: 1px solid black;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 100px;
+} 
