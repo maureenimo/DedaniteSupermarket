@@ -43,17 +43,7 @@ function SearchBar({ handleAddToCart, resetSearchKey }) {
     }
   };
 
-  const clearInput = () => {
-    // Redirect to the home page when clearing the input
-    navigate('/');
-    setFilteredData([]);
-    setWordEntered('');
-  };
-
-  const resetSearchResults = () => {
-    setFilteredData([]);
-    setWordEntered('');
-  };
+ 
 
   return (
     <div className="search-search">
@@ -72,24 +62,7 @@ function SearchBar({ handleAddToCart, resetSearchKey }) {
           )}
         </div>
       </div>
-      {filteredData.length !== 0 ? (
-        <div className="search-searchResultPage">
-          {filteredData.map((value) => (
-            <div Details>
-              <div key={value.id} className="card">
-                <img src={value.imageurl} alt={value.name} />
-                <label>{value.name}</label>
-                <div className="card-details">
-                  <p>Category: {value.category}</p>
-                  <p>Weight: {value.weight}</p>
-                  <p>Price: Kshs.{value.price}</p>
-                  <button onClick={() => handleAddToCart(value)}>Add to Cart</button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      ) : null}
+   
     </div>
   );
 }
