@@ -19,7 +19,24 @@ const ProductDetails = (props) => {
   if (!product) {
     return <div>Loading...</div>;
   }
-
+  const handleAddToCart = () => {
+    const newProduct = {
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      imageurl: product.imageurl
+    };
+    props.handleAddToCart(newProduct);
+    setNotification(true);
+    setTimeout(() => {
+      setNotification(false);
+    }, 500);
+  };
+  
+  const handleBackPage = () => {
+    navigate(-1);
+  };
+  
   return (
     <div className='container'>
       <div className='product-card'>
@@ -32,10 +49,21 @@ const ProductDetails = (props) => {
             <h2>Description:</h2>
             <p>{product.details}</p>
           </div>
+          <div className='button-section'>
+            <button className="product-button-add" onClick={handleAddToCart}>Add to Cart</button>
+            <button className='product-button-back' onClick={handleBackPage}>Back</button>
+          </div>
+          {showNotification ? (
+            <div className='notification-center-product'>
+              <div className='notification'>
+                <p>Added to cart</p>
+              </div>
+            </div>
+          ) : null}
         </div>
       </div>
     </div>
   );
-};
-
+  
+}
 export default ProductDetails;
